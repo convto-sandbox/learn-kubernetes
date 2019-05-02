@@ -1,10 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: sample-annotations
-  annotations:
-    annotation1: val1
-    annotation2: val2
+  name: sample-pod
 spec:
   containers:
     - name: nginx-container
