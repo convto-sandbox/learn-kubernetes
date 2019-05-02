@@ -2,6 +2,11 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: sample-pod
+  labels:
+    system: learn-kubernetes
+    env: test
+    section: '5'
+    target: pod
 spec:
   containers:
     - name: nginx-container
