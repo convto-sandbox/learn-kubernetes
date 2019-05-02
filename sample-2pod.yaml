@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sample-2pod
+  labels:
+    system: learn-kubernetes
+    env: test
+    section: '5'
+    terget: pod
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx:1.12
+    - name: redis-container
+      image: redis:3.2
