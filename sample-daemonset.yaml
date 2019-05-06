@@ -1,14 +1,8 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
-  name: sample-deployment
+  name: sample-ds
 spec:
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxUnavailable: 0
-      maxSurge: 1
-  replicas: 3
   selector:
     matchLabels:
       app: sample-app
@@ -19,4 +13,4 @@ spec:
     spec:
       containers:
         - name: nginx-container
-          image: nginx:1.12
+          image: nvginx:1.12
